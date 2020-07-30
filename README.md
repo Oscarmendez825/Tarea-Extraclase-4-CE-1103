@@ -1,15 +1,15 @@
-#INSTITUTO TECNOLÓGICO DE COSTA RICA
-#ÁREA ACADÉMICA INGENIERÍA EN COMPUTADORES
-#I SEMESTRE 2020
-#Tarea Extraclase de Algortmos y Estructuras de Datos
+# INSTITUTO TECNOLÓGICO DE COSTA RICA
+# ÁREA ACADÉMICA INGENIERÍA EN COMPUTADORES
+# I SEMESTRE 2020
+# Tarea Extraclase de Algortmos y Estructuras de Datos I
 
 
-##Estudiantes:
+## Estudiantes:
 
 Oscar Méndez Granados
 
 Keyner Gómez Pana
 
-##Profesor:
+## Profesor:
 
 Luis Diego Noguera
