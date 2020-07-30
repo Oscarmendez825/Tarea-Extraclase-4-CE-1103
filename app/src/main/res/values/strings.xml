@@ -2,4 +2,8 @@
     <string name="app_name">TE4</string>
     <string name="crear_arbol">Crear Arbol</string>
     <string name="constrayamos_un_arbol">Constrayamos un arbol</string>
+    <string name="este_es_un_arbol_binario_de_busqueda_npor_favor_coloque_los_valores_tales_que_n_cumplan_la_condicion">Este es un arbol binario de busqueda, \npor favor coloque los valores tales que\n cumplan la condicion</string>
+    <string name="seleccione_el_orden">Seleccione el orden</string>
+    <string name="vacio">- - - - - - - - -</string>
+    <string name="generar_orden">generar orden</string>
 </resources>

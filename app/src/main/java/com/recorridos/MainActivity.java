@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         et5 = (EditText)findViewById(R.id.editTextNumber5);
         et6 = (EditText)findViewById(R.id.editTextNumber6);
         et7 = (EditText)findViewById(R.id.editTextNumber7);
-        tv1 = (TextView)findViewById(R.id.textView2);
+        tv1 = (TextView)findViewById(R.id.viewOrden);
         spinner1 = (Spinner)findViewById(R.id.spinner);
-        String[] opciones = {"INORDEN","PREORDEN","POSORDEN"};
+        String[] opciones = {"INORDER","PREORDER","POSTORDER"};
         ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opciones);
         spinner1.setAdapter(adapter);
     }
@@ -38,7 +38,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn_click(View view) {
 
+        T4BinaryTree<Integer> arbol = new T4BinaryTree<Integer>();
+        arbol.insert(Integer.parseInt(et1.getText().toString()));
+        arbol.insert(Integer.parseInt(et2.getText().toString()));
+        arbol.insert(Integer.parseInt(et3.getText().toString()));
+        arbol.insert(Integer.parseInt(et4.getText().toString()));
+        arbol.insert(Integer.parseInt(et5.getText().toString()));
+        arbol.insert(Integer.parseInt(et6.getText().toString()));
+        arbol.insert(Integer.parseInt(et7.getText().toString()));
 
 
+        if (spinner1.getSelectedItem().toString() == "INORDER"){
+            System.out.println("I N O R D E R");
+            tv1.setText(arbol.inorder());
+        } else if (spinner1.getSelectedItem().toString() == "PREORDER"){
+            System.out.println("P R E O R D E R");
+            tv1.setText(arbol.preorder());
+        }else if (spinner1.getSelectedItem().toString() == "POSTORDER"){
+            System.out.println("P O S T O R D E R");
+            tv1.setText(arbol.postorder());
+        }
     }
+
 }

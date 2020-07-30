@@ -1,4 +1,7 @@
 package BTS;
+
+import android.text.Editable;
+
 /***
  * Binary search tree class
  * @author Oscar Méndez
@@ -12,6 +15,8 @@ public class T4BinaryTree <T extends Comparable<T>>{
      * This method verifies if the tree is empty
      * @return Boolean
      */
+    public String resultado;
+
     public boolean isEmpty(){
         if (root == null){
             return true;
@@ -174,11 +179,14 @@ public class T4BinaryTree <T extends Comparable<T>>{
     /***
      * Principal method of the true 'inorder' method.
      */
-    public void inorder()
+    public String inorder()
     {
+        resultado = "";
         System.out.print("In-order Traversal:");
         inorder(root);
-        System.out.println();
+        System.out.println(resultado);
+        return resultado;
+
     }
 
     /***
@@ -191,18 +199,21 @@ public class T4BinaryTree <T extends Comparable<T>>{
             return;
 
         inorder(root.getLeft());
-        System.out.print(" " + root.getData());
+        resultado = resultado + ("  " + root.getData().toString());
         inorder(root.getRight());
     }
 
     /***
      * Principal method of the true 'preorder' method.
      */
-    public void preorder()
+    public String preorder()
     {
+        resultado = "";
         System.out.print("Pre-order Traversal:");
         preorder(root);
         System.out.println();
+        System.out.println(resultado);
+        return resultado;
     }
 
     /***
@@ -214,19 +225,23 @@ public class T4BinaryTree <T extends Comparable<T>>{
         if (root == null)
             return;
 
-        System.out.print(" " + root.getData());
+        resultado = resultado + ("  " + root.getData().toString());
         preorder(root.getLeft());
         preorder(root.getRight());
+        return;
     }
 
     /***
      * Principal method of the true 'postorder' method.
      */
-    public void postorder()
+    public String postorder()
     {
+        resultado = "";
         System.out.print("Post-order Traversal:");
         postorder(root);
         System.out.println();
+        System.out.println(resultado);
+        return resultado;
     }
 
     /***
@@ -240,6 +255,6 @@ public class T4BinaryTree <T extends Comparable<T>>{
 
         postorder(root.getLeft());
         postorder(root.getRight());
-        System.out.print(" " + root.getData());
+        resultado = resultado + ("  " + root.getData().toString());
     }
 }
